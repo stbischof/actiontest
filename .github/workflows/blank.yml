@@ -21,7 +21,6 @@ jobs:
       fail-fast: false
       matrix:
         spec:
-
           - org.osgi.test.cases.async.secure
           - org.osgi.test.cases.async
           - org.osgi.test.cases.bundle.annotations
