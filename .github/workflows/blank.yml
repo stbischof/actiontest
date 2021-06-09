@@ -99,12 +99,11 @@ jobs:
           - org.osgi.test.cases.xml
           - org.osgi.test.cases.zigbee 
         java: [ 8,11 ]
-        os: [ linux,windows ]
-    name: TCK ${{ matrix.spec }} with ${{ matrix.java }} on ${{ matrix.os }}
+    name: TCK ${{ matrix.spec }} with ${{ matrix.java }}
     runs-on: ubuntu-latest
     steps:
     - name: Git Checkout
       uses: actions/checkout@v2
     - name: Run TCK
       run: |
-        echo  ${{ matrix.spec }} ${{ matrix.java }} ${{ matrix.os }}
+        echo  ${{ matrix.spec }} ${{ matrix.java }} on ubuntu
