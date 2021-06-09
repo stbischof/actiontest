@@ -20,10 +20,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        spec: [ a,b,c,d ]
+        spec:
+          - ds
+          - converter
+          - framework
+          - event
         java: [ 8,11 ]
-        os: [ 8,11 ]
-    name: TCK ${{ matrix.spec }} ${{ matrix.java }} ${{ matrix.os }}
+        os: [ linux,windows ]
+    name: TCK ${{ matrix.spec }} with ${{ matrix.java }} on ${{ matrix.os }}
     runs-on: ubuntu-latest
     steps:
     - name: Git Checkout
